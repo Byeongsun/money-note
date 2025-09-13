@@ -38,7 +38,7 @@ export default function Auth() {
           providerScopes={{
             google: 'email profile',
           }}
-          redirectTo={`${window.location.origin}/auth/callback`}
+          redirectTo={import.meta.env.DEV ? 'http://localhost:5173/auth/callback' : 'https://money-note.vercel.app/auth/callback'}
           onlyThirdPartyProviders
           theme="dark"
         />

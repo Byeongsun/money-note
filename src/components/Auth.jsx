@@ -11,7 +11,10 @@ export default function Auth() {
           supabaseClient={supabase}
           appearance={{ theme: ThemeSupa }}
           providers={['google']}
+          view="sign_in"
+          showLinks={false}
           redirectTo={window.location.origin}
+          otherAuth={[]}
         />
       </div>
     </div>
